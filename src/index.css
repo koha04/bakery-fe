@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    line-height: normal;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+  }
+}
+
+@layer components {
+  .name {
+    font-family: "Dancing Script", cursive;
+    text-shadow: -1px 4px 16px rgba(208, 34, 98, 0.5);
+  }
+
+  .link {
+    font-family: "Dancing Script", cursive;
+  }
+
+  .menutitle {
+    font-family: "Dancing Script", cursive;
+  }
+
+  .scrollbar {
+    @apply [&_.swiper-scrollbar]:bg-neutral-300 [&_.swiper-scrollbar-drag]:bg-violet-400;
+  }
+
+  .sale-percent {
+    clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 51% 83%, 0 100%, 0 1%);
+  }
+}
